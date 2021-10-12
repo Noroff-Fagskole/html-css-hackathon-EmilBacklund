@@ -56,12 +56,14 @@ main img {
 
 .app-navigation a:link {
   text-decoration: none;
-  color: #444;
-  padding: 0.5em;
+  color: #2d2d2d;
+  font-family: 'Exo';
+  font-weight: 800;
+  transition-duration: 1s;
 }
 
 .app-navigation a:visited {
-  color: #444;
+  color: #2d2d2d;
 }
 
 .app-navigation a:active {
@@ -69,12 +71,66 @@ main img {
 }
 
 .app-navigation a:hover {
-  color: red;
+  color: rgb(51, 116, 102);
+}
+
+.app-navigation-drawer {
+  /* hide nav on load */
+  display: block;
+  background: #eee;
+  padding: 1em;
+  list-style: none;
+  border-bottom: 2px solid #2d2d2d;
+  box-shadow: 0px 0px 5px 5px #2d2d2d;
+  /* animate: default state on page load */
+  transition: all 0.4s linear;
+  /* transform: translateY is from top.
+  translateX is from the side */
+  /*transform: translateY(-200px);*/
+  transform: translateY(-160%);
+}
+
+.sr-only {
+  display: none;
+}
+
+#hamburger-menu {
+  display: none;
+}
+
+#hamburger-menu label {
+  cursor: pointer;
+}
+
+#hamburger-menu:checked ~ .app-navigation-drawer {
+  /* show nav */
+  display: block;
+  transform: translateY(0%);
+}
+
+ul li::marker {
+  color: rgb(51, 116, 102);
+  font-size: 1.5em;
+}
+
+@media screen and (min-width: 767px) {
+  .app-article {
+    display: inline-block;
+    border: 1px solid red;
+    width: 60%;
+  }
+
+  .app-sidebar {
+    display: inline-block;
+    border: 1px solid black;
+    width: 35%;
+    vertical-align: top;
+  }
 }
 
 h1 {
   font-size: 2.5rem;
-  margin-bottom: 0;
+  margin: 20px 0 10px 0;
   font-family: 'Exo';
 }
 
