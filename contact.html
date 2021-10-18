@@ -32,12 +32,17 @@
           <img src="./img/logo.png" alt="CSS Tricks" />
         </a>
         <nav class="app-navigation">
-          <a href="/"><i class="fas fa-home"></i>Home</a>
-          <a href="./about.html"><i class="fas fa-info-circle"></i>About</a>
-          <a href="./contact.html">
-            <i class="fas fa-address-book"></i>Contact</a
-          >
-          <a href="./login.html"> <i class="fas fa-sign-in-alt"></i>Login</a>
+
+          <label for="hamburger-menu"
+      ><span class="sr-only">Hamburger Menu</span> <i class="fas fa-bars"></i
+    ></label>
+    <input id="hamburger-menu" type="checkbox" />
+    <ul class="app-navigation-drawer">
+      <li><a href="/"><i class="fas fa-home"></i>Home</a></li>
+      <li><a href="./about.html"><i class="fas fa-info-circle"></i>About</a></li>
+      <li><a href="./contact.html"> <i class="fas fa-address-book"></i>Contact</a></li>
+      <li><a href="./login.html"> <i class="fas fa-sign-in-alt"></i>Login</a></li>
+    </ul>
         </nav>
       </div>
     </header>
@@ -177,7 +182,7 @@
               <input id="submit" type="submit" value="Submit" />
             </form>
           </article>
-          <aside class="app-sidebar"></aside>
+          <aside class="app-sidebar">Sidebar</aside>
         </section>
       </div>
     </main>
